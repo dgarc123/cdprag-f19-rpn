@@ -15,4 +15,9 @@ class TestBasics(unittest.TestCase):
     def test_divide(self):
         result = rpn.calculate("6 3 /")
         self.assertEqual(2, result)
-
+    def test_floor_div(self):
+        result = rpn.calculate("12 8 /")
+        self.assertEqual(1, result)
+    def test_exponent(self):
+        result = rpn.calculate("3 2 ^")
+        self.assertEqual(9, result)
